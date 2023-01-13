@@ -1,4 +1,4 @@
-// OS Module
+/* OS Module */
 
 const os = require("os");
 
@@ -17,3 +17,18 @@ const currentOS = {
 };
 
 console.log(currentOS);
+
+/* Path Module */
+
+const path = require("path");
+
+console.log(path.sep);
+
+const filePath = path.join(__dirname, __filename);
+console.log(filePath); // delimited by default delimiter '/'
+
+const base = path.basename(filePath);
+console.log(base);
+
+// resolve important for having code work on different interfaces that may not have the same path directory to a certain file
+const absolute = path.resolve(__dirname, "c");
