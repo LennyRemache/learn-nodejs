@@ -32,3 +32,13 @@ console.log(base);
 
 // resolve important for having code work on different interfaces that may not have the same path directory to a certain file
 const absolute = path.resolve(__dirname, "c");
+
+/* FS Module (Sync) */
+
+const { readFileSync, writeFileSync } = require("fs");
+
+const first = readFileSync("./lesson3-first.txt", "utf8");
+const second = readFileSync("./lesson3-second.txt", "utf8");
+console.log(first, second);
+
+writeFileSync("lesson3-third.txt", "Hi this is third.txt", { flag: "a" }); // flag to prevent override and instead append to file
