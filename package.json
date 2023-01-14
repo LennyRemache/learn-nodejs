@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LennyRemache/learn-nodejs#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "lodash": "^4.17.21"
   }
 }
